@@ -5,4 +5,12 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="facebook_app_id">441732602881638</string>
+
+    <string name="user">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="register">Cadastrar</string>
+    <string name="enter">Entrar</string>
+    <string name="forgot_pass">Esqueci a senha</string>
 </resources>
