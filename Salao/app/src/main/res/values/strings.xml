@@ -13,4 +13,9 @@
     <string name="register">Cadastrar</string>
     <string name="enter">Entrar</string>
     <string name="forgot_pass">Esqueci a senha</string>
+    <string name="fullName">Nome completo</string>
+    <string name="email">E-mail</string>
+    <string name="showPassword">Mostrar senha</string>
+    <string name="cancel">cancel</string>
+    <string name="ok">ok</string>
 </resources>

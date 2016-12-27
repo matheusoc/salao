@@ -1,4 +1,4 @@
-package matheus.br.salao;
+package matheus.br.salao.structure.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +25,9 @@ import com.facebook.login.widget.ProfilePictureView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import matheus.br.salao.R;
+import matheus.br.salao.structure.view.LoginActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
