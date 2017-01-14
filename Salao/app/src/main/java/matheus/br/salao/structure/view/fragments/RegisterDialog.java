@@ -5,7 +5,6 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.graphics.Point;
 import android.os.Bundle;
-import android.text.InputType;
 import android.text.method.PasswordTransformationMethod;
 import android.view.Display;
 import android.view.LayoutInflater;
@@ -16,10 +15,8 @@ import android.widget.EditText;
 
 import matheus.br.salao.R;
 import matheus.br.salao.structure.Constants;
-
-/**
- * Created by MatheusdeOliveiraCam on 27/12/2016.
- */
+import matheus.br.salao.structure.model.User;
+import matheus.br.salao.structure.soap.LoginServices;
 
 public class RegisterDialog extends DialogFragment implements View.OnClickListener {
 
@@ -72,7 +69,9 @@ public class RegisterDialog extends DialogFragment implements View.OnClickListen
         int width = size.x - 20;
         int height = size.y - 200;
 
-        createDialog.getWindow().setLayout(width,height);
+        if(createDialog.getWindow() != null){
+            createDialog.getWindow().setLayout(width,height);
+        }
         return createDialog;
     }
 
@@ -90,6 +89,14 @@ public class RegisterDialog extends DialogFragment implements View.OnClickListen
                 createDialog.dismiss();
                 break;
             case R.id.okButton:
+                User user = new User();
+
+                user.setName(mRegisterName.getText().toString());
+                user.setEmail(mRegisterEmail.getText().toString());
+                user.setUsername(mRegisterUser.getText().toString());
+                user.setPassword(mRegisterPassword.getText().toString());
+
+                LoginServices.registerUser(user, this);
                 break;
         }
     }

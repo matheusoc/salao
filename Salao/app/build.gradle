@@ -16,6 +16,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        repositories {
+            maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' }
+        }
     }
 }
 
@@ -28,5 +31,8 @@ dependencies {
     compile 'com.android.support:design:25.1.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.facebook.fresco:fresco:1.0.0'
+
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.6.1'
+
     testCompile 'junit:junit:4.12'
 }

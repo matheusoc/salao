@@ -1,9 +1,9 @@
 package matheus.br.salao.structure.view;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -26,7 +26,7 @@ import matheus.br.salao.structure.view.fragments.RegisterDialog;
  * Created by MatheusdeOliveiraCam on 26/12/2016.
  */
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
+public class LoginActivity extends Activity implements View.OnClickListener{
 
     private CallbackManager mCallbackManager;
     private LoginButton mLoginButtonFacebook;
