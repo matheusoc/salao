@@ -96,7 +96,10 @@ public class RegisterDialog extends DialogFragment implements View.OnClickListen
                 user.setUsername(mRegisterUser.getText().toString());
                 user.setPassword(mRegisterPassword.getText().toString());
 
-                LoginServices.registerUser(user, this);
+                ProgressRequestDialog mProgressRequestDialog = new
+                        ProgressRequestDialog(this.getActivity(),
+                        "Aguarde...", user, this);
+                mProgressRequestDialog.start();
                 break;
         }
     }

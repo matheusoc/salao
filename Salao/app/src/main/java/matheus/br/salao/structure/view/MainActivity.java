@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity
     private ProfileTracker profileTracker;
     private TextView profileName;
     private TextView profileEmail;
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,15 +75,6 @@ public class MainActivity extends AppCompatActivity
         } else {
             setProfileSettings();
         }
-
-        button = (Button) findViewById(R.id.but);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String d = CalculadoraClient.converterCelsiusParaFarenheit();
-                Toast.makeText(getApplicationContext(), d, Toast.LENGTH_SHORT).show();
-            }
-        });
 
     }
 
